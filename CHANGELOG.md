@@ -2,4 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.2](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.1...v0.1.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* save config should report filename with extname ([2aa3055](https://github.com/offline-ai/cli-plugin-cmd-config.js/commit/2aa3055e25e5b001f57520749ae40cec129e354b))
+
 ## 0.1.1 (2024-08-16)
