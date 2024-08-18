@@ -31,7 +31,7 @@ npm install -g @offline-ai/cli
 
 <!-- commands -->
 * [`ai config [ITEM_NAME]`](#ai-config-item_name)
-* [`ai config save [DATA]`](#ai-config-save-data)
+* [`ai config:save [DATA]`](#ai-configsave-data)
 
 ## `ai config [ITEM_NAME]`
 
@@ -58,7 +58,8 @@ DESCRIPTION
 
 EXAMPLES
   # list all configurations
-  $ ai config
+
+    $ ai config
 
   # get the brainDir config item
   $ ai config brainDir
@@ -70,15 +71,15 @@ EXAMPLES
 
 _See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.2/src/commands/config/index.ts)_
 
-## `ai config save [DATA]`
+## `ai config:save [DATA]`
 
 💾 Save the configuration to file.
 
 ```
 USAGE
-  $ ai config save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [-s
-    <value>...] [-l silence|fatal|error|warn|info|debug|trace] [-h <value>] [-n] [-k] [-t <value> -i] [--no-chats]
-    [--no-inputs ] [-m] [-f <value>] [-d <value>] [-a <value>] [-b <value>] [-p <value>...]
+  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [-s <value>...] [-l
+    silence|fatal|error|warn|info|debug|trace] [-h <value>] [-n] [-k] [-t <value> -i] [--no-chats] [--no-inputs ] [-m]
+    [-f <value>] [-d <value>] [-a <value>] [-b <value>] [-p <value>...]
 
 ARGUMENTS
   DATA  the json data which will be passed to the ai-agent script
