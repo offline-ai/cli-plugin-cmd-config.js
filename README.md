@@ -68,7 +68,7 @@ EXAMPLES
   }
 ```
 
-_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.1/src/commands/config/index.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.2/src/commands/config/index.ts)_
 
 ## `ai config save [DATA]`
 
@@ -109,5 +109,5 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.1/src/commands/config/save.ts)_
+_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.2/src/commands/config/save.ts)_
 <!-- commandsstop -->
