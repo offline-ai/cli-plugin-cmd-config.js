@@ -11,7 +11,7 @@
   "bugs": "https://github.com/@offline-ai/cli-plugin-cmd-config.js/issues",
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
-    "@oclif/core": "^4.0.17",
+    "@oclif/core": "^4",
     "@offline-ai/cli-common": "workspace:*",
     "lodash-es": "^4.17.21"
   },
@@ -62,9 +62,7 @@
   "oclif": {
     "bin": "ai",
     "dirname": "ai",
-    "commands": "./dist/oclif/commands",
-    "theme": "theme.json",
-    "topicSeparator": " "
+    "commands": "./dist/oclif/commands"
   },
   "scripts": {
     "build": "shx rm -rf dist && tsup",
