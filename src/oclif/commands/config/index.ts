@@ -1,6 +1,5 @@
 import { Args } from '@oclif/core'
-import { getXDGConfigs } from '@offline-ai/cli-common'
-import { AICommand, showBanner } from '@offline-ai/cli-common'
+import { AICommand, AICommonFlags, getXDGConfigs, showBanner } from '@offline-ai/cli-common'
 import { get as getByPath } from 'lodash-es'
 
 export default class AIConfigCommand extends AICommand {
@@ -30,7 +29,7 @@ AI Configuration:
   ]
 
   static flags = {
-    ...AICommand.flags,
+    ...AICommonFlags,
   }
 
   async run(): Promise<any> {
