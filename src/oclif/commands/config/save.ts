@@ -5,7 +5,7 @@ import { parseJsJson, saveConfigFile } from '@isdk/ai-tool'
 export default class AIConfigSaveCommand extends AICommand {
   static enableJsonFlag = true
 
-  static summary = '💾 Save the configuration to file.'
+  static summary = '💾 Save the current configuration to file which can be used to initialize config.'
 
   // static description = ''
 
