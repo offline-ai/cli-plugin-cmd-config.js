@@ -41,7 +41,8 @@ npm install -g @offline-ai/cli
 USAGE
   $ ai config [ITEM_NAME] [--json] [-u <value>] [-s <value>...] [-l
     silence|fatal|error|warn|info|debug|trace] [-h <value>] [-n] [-k] [-t <value> -i] [--no-chats] [--no-inputs ] [-m]
-    [-f <value>] [-d <value>] [-a <value>] [-b <value>] [-p <value>...] [-L <value>] [-A <value>] [-e true|false|line]
+    [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>] [-A <value>] [-e
+    true|false|line]
 
 ARGUMENTS
   ITEM_NAME  the config item name path to get
@@ -49,6 +50,7 @@ ARGUMENTS
 FLAGS
   -A, --aiPreferredLanguage=<value>    the ISO 639-1 code for the AI preferred language to translate the user input
                                        automatically, eg, en, etc.
+  -D, --data=<value>...                the data which will be passed to the ai-agent script: key1=value1 key2=value2
   -L, --userPreferredLanguage=<value>  the ISO 639-1 code for the user preferred language to translate the AI result
                                        automatically, eg, en, zh, ja, ko, etc.
   -a, --arguments=<value>              the json data which will be passed to the ai-agent script
@@ -97,13 +99,14 @@ _See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plug
 
 ## `ai config:save [DATA]`
 
-💾 Save the configuration to file.
+💾 Save the current configuration to file which can be used to initialize config.
 
 ```
 USAGE
   $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [-s <value>...] [-l
     silence|fatal|error|warn|info|debug|trace] [-h <value>] [-n] [-k] [-t <value> -i] [--no-chats] [--no-inputs ] [-m]
-    [-f <value>] [-d <value>] [-a <value>] [-b <value>] [-p <value>...] [-L <value>] [-A <value>] [-e true|false|line]
+    [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>] [-A <value>] [-e
+    true|false|line]
 
 ARGUMENTS
   DATA  the json data which will be passed to the ai-agent script
@@ -111,6 +114,7 @@ ARGUMENTS
 FLAGS
   -A, --aiPreferredLanguage=<value>    the ISO 639-1 code for the AI preferred language to translate the user input
                                        automatically, eg, en, etc.
+  -D, --data=<value>...                the data which will be passed to the ai-agent script: key1=value1 key2=value2
   -L, --userPreferredLanguage=<value>  the ISO 639-1 code for the user preferred language to translate the AI result
                                        automatically, eg, en, zh, ja, ko, etc.
   -a, --arguments=<value>              the json data which will be passed to the ai-agent script
