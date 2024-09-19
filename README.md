@@ -39,7 +39,7 @@ npm install -g @offline-ai/cli
 
 ```
 USAGE
-  $ ai config [ITEM_NAME] [--json] [-u <value>] [-s <value>...] [-l
+  $ ai config [ITEM_NAME] [--json] [-u <value>] [--apiKey <value>] [-s <value>...] [-l
     trace|debug|verbose|info|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i] [--no-chats]
     [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>]
     [-A <value>] [-e true|false|line] [-e <value>]
@@ -71,6 +71,7 @@ FLAGS
   -s, --agentDirs=<value>...           the search paths for ai-agent script file
   -t, --inputs=<value>                 the input histories folder for interactive mode to record
   -u, --api=<value>                    the api URL
+      --apiKey=<value>                 the api key (optional)
       --histories=<value>              the chat histories folder to record
       --no-chats                       disable chat histories, defaults to false
       --no-inputs                      disable input histories, defaults to false
@@ -96,7 +97,7 @@ EXAMPLES
   }
 ```
 
-_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.16/src/commands/config/index.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.17/src/commands/config/index.ts)_
 
 ## `ai config:save [DATA]`
 
@@ -104,7 +105,7 @@ _See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plug
 
 ```
 USAGE
-  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [-s <value>...] [-l
+  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [--apiKey <value>] [-s <value>...] [-l
     trace|debug|verbose|info|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i] [--no-chats]
     [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>]
     [-A <value>] [-e true|false|line] [-e <value>]
@@ -137,6 +138,7 @@ FLAGS
   -s, --agentDirs=<value>...           the search paths for ai-agent script file
   -t, --inputs=<value>                 the input histories folder for interactive mode to record
   -u, --api=<value>                    the api URL
+      --apiKey=<value>                 the api key (optional)
       --[no-]banner                    show banner
       --histories=<value>              the chat histories folder to record
       --no-chats                       disable chat histories, defaults to false
@@ -146,5 +148,5 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.16/src/commands/config/save.ts)_
+_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.17/src/commands/config/save.ts)_
 <!-- commandsstop -->
