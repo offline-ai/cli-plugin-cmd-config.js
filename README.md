@@ -39,10 +39,10 @@ npm install -g @offline-ai/cli
 
 ```
 USAGE
-  $ ai config [ITEM_NAME] [--json] [-u <value>] [--apiKey <value>] [-s <value>...] [-l
-    trace|debug|verbose|info|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i] [--no-chats]
-    [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>]
-    [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
+  $ ai config [ITEM_NAME] [--json] [-u <value>] [--apiKey <value>] [-s <value>...] [--logLevelMaxLen <value>
+    -l trace|debug|verbose|info|notice|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i]
+    [--no-chats] [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...]
+    [-L <value>] [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
 
 ARGUMENTS
   ITEM_NAME  the config item name path to get
@@ -64,7 +64,7 @@ FLAGS
   -i, --[no-]interactive               interactive mode
   -k, --backupChat                     whether to backup chat history before start, defaults to false
   -l, --logLevel=<option>              the log level
-                                       <options: trace|debug|verbose|info|warn|error|fatal|silence>
+                                       <options: trace|debug|verbose|info|notice|warn|error|fatal|silence>
   -m, --[no-]stream                    stream mode, defaults to true
   -n, --[no-]newChat                   whether to start a new chat history, defaults to false in interactive mode, true
                                        in non-interactive
@@ -74,6 +74,7 @@ FLAGS
   -u, --api=<value>                    the api URL
       --apiKey=<value>                 the api key (optional)
       --histories=<value>              the chat histories folder to record
+      --logLevelMaxLen=<value>         the max length of log item to display
       --no-chats                       disable chat histories, defaults to false
       --no-inputs                      disable input histories, defaults to false
 
@@ -106,10 +107,10 @@ _See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plug
 
 ```
 USAGE
-  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [--apiKey <value>] [-s <value>...] [-l
-    trace|debug|verbose|info|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i] [--no-chats]
-    [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...] [-L <value>]
-    [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
+  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [--apiKey <value>] [-s <value>...]
+    [--logLevelMaxLen <value> -l trace|debug|verbose|info|notice|warn|error|fatal|silence] [--histories <value>] [-n]
+    [-k] [-t <value> -i] [--no-chats] [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b
+    <value>] [-p <value>...] [-L <value>] [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
 
 ARGUMENTS
   DATA  the json data which will be passed to the ai-agent script
@@ -132,7 +133,7 @@ FLAGS
   -i, --[no-]interactive               interactive mode
   -k, --backupChat                     whether to backup chat history before start, defaults to false
   -l, --logLevel=<option>              the log level
-                                       <options: trace|debug|verbose|info|warn|error|fatal|silence>
+                                       <options: trace|debug|verbose|info|notice|warn|error|fatal|silence>
   -m, --[no-]stream                    stream mode, defaults to true
   -n, --[no-]newChat                   whether to start a new chat history, defaults to false in interactive mode, true
                                        in non-interactive
@@ -143,6 +144,7 @@ FLAGS
       --apiKey=<value>                 the api key (optional)
       --[no-]banner                    show banner
       --histories=<value>              the chat histories folder to record
+      --logLevelMaxLen=<value>         the max length of log item to display
       --no-chats                       disable chat histories, defaults to false
       --no-inputs                      disable input histories, defaults to false
 
