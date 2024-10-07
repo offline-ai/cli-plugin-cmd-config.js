@@ -42,7 +42,7 @@ USAGE
   $ ai config [ITEM_NAME] [--json] [-u <value>] [--apiKey <value>] [-s <value>...] [--logLevelMaxLen <value>
     -l trace|debug|verbose|info|notice|warn|error|fatal|silence] [--histories <value>] [-n] [-k] [-t <value> -i]
     [--no-chats] [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b <value>] [-p <value>...]
-    [-L <value>] [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
+    [-L <value>] [-A <value>] [-e true|false|line] [-C <value>] [-P <value>]
 
 ARGUMENTS
   ITEM_NAME  the config item name path to get
@@ -50,6 +50,7 @@ ARGUMENTS
 FLAGS
   -A, --aiPreferredLanguage=<value>    the ISO 639-1 code for the AI preferred language to translate the user input
                                        automatically, eg, en, etc.
+  -C, --streamEchoChars=<value>        [default: 80] stream echo max characters limit
   -D, --data=<value>...                the data which will be passed to the ai-agent script: key1=value1 key2=value2
   -L, --userPreferredLanguage=<value>  the ISO 639-1 code for the user preferred language to translate the AI result
                                        automatically, eg, en, zh, ja, ko, etc.
@@ -57,9 +58,8 @@ FLAGS
   -a, --arguments=<value>              the json data which will be passed to the ai-agent script
   -b, --brainDir=<value>               the brains(LLM) directory
   -d, --dataFile=<value>               the data file which will be passed to the ai-agent script
-  -e, --streamEcho=<option>            [default: true] stream echo mode, defaults to true
+  -e, --streamEcho=<option>            [default: line] stream echo mode, defaults to true
                                        <options: true|false|line>
-  -e, --streamEchoChars=<value>        stream echo max characters limit, defaults to no limit
   -f, --script=<value>                 the ai-agent script file name or id
   -i, --[no-]interactive               interactive mode
   -k, --backupChat                     whether to backup chat history before start, defaults to false
@@ -99,7 +99,7 @@ EXAMPLES
   }
 ```
 
-_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.22/src/commands/config/index.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.23/src/commands/config/index.ts)_
 
 ## `ai config:save [DATA]`
 
@@ -107,10 +107,10 @@ _See code: [src/commands/config/index.ts](https://github.com/offline-ai/cli-plug
 
 ```
 USAGE
-  $ ai config:save [DATA] [--json] [-c <value>] [--banner] [-u <value>] [--apiKey <value>] [-s <value>...]
+  $ ai config:save [DATA] [--json] [--config <value>] [--banner] [-u <value>] [--apiKey <value>] [-s <value>...]
     [--logLevelMaxLen <value> -l trace|debug|verbose|info|notice|warn|error|fatal|silence] [--histories <value>] [-n]
     [-k] [-t <value> -i] [--no-chats] [--no-inputs ] [-m] [-f <value>] [-d <value>] [-D <value>...] [-a <value>] [-b
-    <value>] [-p <value>...] [-L <value>] [-A <value>] [-e true|false|line] [-e <value>] [-P <value>]
+    <value>] [-p <value>...] [-L <value>] [-A <value>] [-e true|false|line] [-C <value>] [-P <value>]
 
 ARGUMENTS
   DATA  the json data which will be passed to the ai-agent script
@@ -118,17 +118,16 @@ ARGUMENTS
 FLAGS
   -A, --aiPreferredLanguage=<value>    the ISO 639-1 code for the AI preferred language to translate the user input
                                        automatically, eg, en, etc.
+  -C, --streamEchoChars=<value>        [default: 80] stream echo max characters limit
   -D, --data=<value>...                the data which will be passed to the ai-agent script: key1=value1 key2=value2
   -L, --userPreferredLanguage=<value>  the ISO 639-1 code for the user preferred language to translate the AI result
                                        automatically, eg, en, zh, ja, ko, etc.
   -P, --provider=<value>               the LLM provider, defaults to llamacpp
   -a, --arguments=<value>              the json data which will be passed to the ai-agent script
   -b, --brainDir=<value>               the brains(LLM) directory
-  -c, --config=<value>                 the config file
   -d, --dataFile=<value>               the data file which will be passed to the ai-agent script
-  -e, --streamEcho=<option>            [default: true] stream echo mode, defaults to true
+  -e, --streamEcho=<option>            [default: line] stream echo mode, defaults to true
                                        <options: true|false|line>
-  -e, --streamEchoChars=<value>        stream echo max characters limit, defaults to no limit
   -f, --script=<value>                 the ai-agent script file name or id
   -i, --[no-]interactive               interactive mode
   -k, --backupChat                     whether to backup chat history before start, defaults to false
@@ -143,6 +142,7 @@ FLAGS
   -u, --api=<value>                    the api URL
       --apiKey=<value>                 the api key (optional)
       --[no-]banner                    show banner
+      --config=<value>                 the config file
       --histories=<value>              the chat histories folder to record
       --logLevelMaxLen=<value>         the max length of log item to display
       --no-chats                       disable chat histories, defaults to false
@@ -152,5 +152,5 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.22/src/commands/config/save.ts)_
+_See code: [src/commands/config/save.ts](https://github.com/offline-ai/cli-plugin-cmd-config.js/blob/v0.1.23/src/commands/config/save.ts)_
 <!-- commandsstop -->
