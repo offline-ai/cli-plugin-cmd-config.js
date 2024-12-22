@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.35](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.34...v0.1.35) (2024-12-22)
+
 ## [0.1.34](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.33...v0.1.34) (2024-12-19)
 
 ## [0.1.33](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.32...v0.1.33) (2024-12-18)
