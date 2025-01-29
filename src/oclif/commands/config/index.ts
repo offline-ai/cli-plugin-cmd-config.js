@@ -1,5 +1,6 @@
+import { getXDGConfigs } from '@isdk/ai-tool'
 import { Args } from '@oclif/core'
-import { AICommand, AICommonFlags, getXDGConfigs, showBanner } from '@offline-ai/cli-common'
+import { AICommand, AICommonFlags, showBanner } from '@offline-ai/cli-common'
 import { get as getByPath } from 'lodash-es'
 
 export default class AIConfigCommand extends AICommand {
