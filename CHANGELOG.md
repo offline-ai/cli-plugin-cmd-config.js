@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.0](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.35...v0.2.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* following upstream cli-common
+
+### Refactor
+
+* following upstream cli-common ([cfeea17](https://github.com/offline-ai/cli-plugin-cmd-config.js/commit/cfeea17410d8c542898bc89e468b3617ff33ff44))
+
 ## [0.1.35](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.34...v0.1.35) (2024-12-22)
 
 ## [0.1.34](https://github.com/offline-ai/cli-plugin-cmd-config.js/compare/v0.1.33...v0.1.34) (2024-12-19)
