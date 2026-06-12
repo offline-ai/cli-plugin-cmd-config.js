@@ -8,7 +8,9 @@
   },
   "homepage": "https://github.com/offline-ai/cli-plugin-cmd-config.js",
   "repository": "https://github.com/offline-ai/cli-plugin-cmd-config.js",
-  "bugs": "https://github.com/@offline-ai/cli-plugin-cmd-config.js/issues",
+  "bugs": {
+    "url": "https://github.com/offline-ai/cli-plugin-cmd-config.js/issues"
+  },
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
     "@oclif/core": "^4",
